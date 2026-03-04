@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Joao Henares</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon" />
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet" />
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Updated: Jan 09 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="../assets/img/profile-img.jpeg" alt="" class="img-fluid rounded-circle" />
+        <h1 class="text-light"><a href="../index.html">Joao Henares</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://www.linkedin.com/in/joao-henares-61083a1b4/" class="linkedin"><i
+              class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/jpireshe" class="github"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li>
+            <a href="../index.html" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link scrollto">
+              <span>Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="nav-link scrollto"><span>About</span></a>
+          </li>
+          <li>
+            <a href="#resume" class="nav-link scrollto"> <span>Resume</span></a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link scrollto"> <span>Contact</span></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- .nav-menu -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main id="main">
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="project-card">
+          <div class="project-video">
+            <iframe src="https://www.youtube.com/embed/" title="Trailer" frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="project-content">
+            <h3 class="project-title">2DBonk</h3>
+            <p class="project-roles">
+              Systems Design | Gameplay Programming | UI/UX Implementation | Content Pipeline
+            </p>
+            <a href="https://pizzatunes.itch.io/2dbonk" class="play-game">Play The Game →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Summary</h3>
+            <br>
+            <p class="project-roles">
+              2DBonk is a humor-focused 2D survivors-style roguelike prototype built in Unity in ~2.5 weeks.
+              The game combines horde survival combat with increased player agency through inventory management
+              and rhythm-based “Aura Post” challenges that reward powerful stat upgrades during a run.
+              <br><br>
+              The project was designed as a systems showcase: modular weapons, scalable stat architecture,
+              data-driven enemy spawning, and a full run loop across multiple stages with build-defining rewards.
+              <br><br>
+              The prototype was later presented at the FIEA Industry Review, where it was selected as a finalist
+              and received recognition in the <b>“Most Addictive Game”</b> category.
+            </p>
+            <br>
+            <h3 class="project-title">Project Details</h3>
+            <br>
+            <p class="project-roles">
+
+              <b>Content</b><br>
+              3 playable characters with unique starter weapons and level-scaling bonuses <br>
+              5 weapons with unique behaviour modular upgradeable stats (damage, rate, duration, size, etc.) <br>
+              12 inventory items with rarity tiers and unique behaviors <br>
+              9 bobblehead passives obtained through level progression <br>
+              10+ enemy types including bosses and final swarm encounters <br>
+              3 stages following a progression loop (Aura Posts → boss → portal) <br>
+              <br>
+
+              <b>Systems</b><br>
+              Modular stat architecture supporting stacking modifiers from multiple gameplay systems <br>
+              Data-driven enemy spawn tables with timed events (boss spawns, swarms, final swarm state) <br>
+              Object pooling system supporting large enemy counts (1000+ active enemies at ~90 FPS) <br>
+              Aura Post rhythm challenge system granting build-defining stat rewards <br>
+              Full run UI suite including menus, inventory, shops, reward selection, and HUD <br>
+
+            </p>
+            <br>
+            <h3 class="project-title">Team and Time</h3>
+            <br>
+            <p class="project-roles">
+              Team Size: 1 (Solo project) <br>
+              Time: ~2.5 weeks <br>
+              Constraint: 2D-only production requirement <br>
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Goals</h3>
+            <br>
+            <p class="project-roles">
+              The goal of 2DBonk was to design and implement a complete survivors-style roguelike loop within a short
+              production
+              window while experimenting with systems that give the player more agency than typical games in the genre.
+              <br><br>
+              Inspired by titles such as Vampire Survivors and Megabonk, the project focuses on large-scale enemy
+              encounters and
+              build-driven progression. However, the design introduces additional decision-making layers through an
+              inventory
+              system, collectible passive items, and Aura Post challenges that require players to complete
+              musical-rhythm-style
+              inputs
+              while surviving enemy waves in real time.
+              <br><br>
+              From a technical design perspective, the project aimed to build a scalable systems architecture capable of
+              supporting large enemy counts, multiple stat modifiers, and modular gameplay content such as weapons,
+              items, and
+              enemy behaviors. These systems were designed to remain flexible so that new content could be introduced
+              quickly
+              during development.
+              <br><br>
+              The prototype was developed over approximately 2.5 weeks under a 2D production constraint, with a strong
+              emphasis
+              on rapidly implementing interconnected gameplay systems that could support a full run loop across multiple
+              stages.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Systems</h3>
+            <br>
+
+            <h4 style="color: white">Stat Architecture</h4>
+            <p class="project-roles">
+              Centralized stat architecture managed through a dedicated <b>Stat Manager</b> system <br>
+              Each stat stored as a structured value containing base value, flat modifiers, and percentage modifiers
+              <br>
+              Supports both absolute increases (+5 HP, +1 projectile) and relative scaling (+10% damage, +20% fire rate)
+              <br>
+              Multiple gameplay systems feed into the same stat pipeline, including leveling rewards, Aura Post bonuses,
+              inventory
+              items, bobbleheads, and permanent shop upgrades <br>
+              Weapon stats inherit relevant player modifiers while maintaining independent stat definitions when needed
+              <br>
+              Designed to keep stat updates consistent and predictable while enabling complex build synergies <br>
+            </p>
+            <img style="width: 90%" src="../assets/img/2dbonk/statsgif.gif">
+            <br><br>
+
+            <h4 style="color: white">Weapon Framework</h4>
+            <p class="project-roles">
+              Modular weapon framework with a shared interface supporting multiple firing patterns <br>
+              Weapon execution styles include <b>constant</b> (always active) and <b>cooldown-based</b> (triggered
+              attacks)
+              behaviors <br>
+              Each weapon controls its own behavior via prefab-driven logic (spawns, hitboxes, projectiles, targeting
+              rules) <br>
+              Upgrade pipeline applies only relevant scaling stats per weapon (e.g., Big Smile ignores projectile count)
+              <br>
+              Designed for rapid weapon iteration without rewriting core combat code <br>
+            </p>
+            <img style="width: 90%" src="../assets/img/2dbonk/weaponsgif.gif">
+            <br><br>
+
+
+            <h4 style="color: white">Inventory, Items, and Bobbleheads</h4>
+            <p class="project-roles">
+              Limited-slot inventory system designed to increase player decision-making during runs <br>
+              Items feature rarity tiers (uncommon → legendary) and provide build-defining stat bonuses or unique
+              effects <br>
+              Item effects implemented as ScriptableObjects with behavior prefabs (e.g., periodic XP vacuum,
+              kill-scaling damage)
+              <br>
+              Bobbleheads act as upgradable passive rewards that modify key stats and influence build direction <br>
+              Built to support rapid content expansion through data-driven definitions <br>
+            </p>
+            <img style="width: 90%" src="../assets/img/2dbonk/inventorygif.gif">
+            <br><br>
+
+
+            <h4 style="color: white">Spawning, Events, and Performance</h4>
+            <p class="project-roles">
+              Data-driven spawn table system per stage using ScriptableObjects (weights, time windows, caps, boss rules)
+              <br>
+              Event system supports special phases such as boss windows, timed swarms, and a permanent final swarm mode
+              <br>
+              Enemies pooled on level start to avoid runtime instantiation spikes and support high entity counts <br>
+              Stress-tested with 1000+ active enemies at ~90 FPS (1700+ at ~60 FPS in editor testing) <br>
+            </p>
+            <img style="width: 90%" src="../assets/img/2dbonk/spawngif.gif">
+            <br><br>
+
+
+            <h4 style="color: white">Aura Post Rhythm Challenge</h4>
+            <p class="project-roles">
+              “Aura Posts” introduce an active skill challenge inside a survivors-style run loop <br>
+              Rhythm-input mini-game grants stat rewards while enemies remain active (risk/reward tension) <br>
+              Rewards scale by <b>rarity</b> and are influenced by the player’s <b>Luck</b> stat (which can be upgraded)
+              <br>
+              Rewards integrate directly into the stat architecture to enable build synergy and progression spikes <br>
+              Designed to increase player agency beyond typical auto-attack survivor mechanics <br>
+            </p>
+            <img style="width: 90%" src="../assets/img/2dbonk/auragif.gif">
+            <br><br>
+
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+
+            <h3 class="project-title">Technical Challenge: Scalable Stat Architecture</h3>
+
+            <p class="project-roles">
+              2DBonk features a large number of gameplay statistics and multiple systems that modify them during a run,
+              including leveling rewards, Aura Post bonuses, inventory items, bobbleheads, permanent upgrades, and
+              weapon
+              scaling.
+              <br><br>
+              Because many of these systems interact simultaneously, maintaining consistent stat values across gameplay,
+              UI, and weapon logic became a major technical challenge. Without a centralized system, stat updates could
+              easily
+              become fragmented or produce inconsistent results when multiple modifiers stacked together.
+              <br><br>
+              The goal was to create a stat architecture that allowed many independent gameplay systems to modify player
+              statistics while keeping the final values predictable and easy to query across the codebase.
+            </p>
+
+            <h3 class="project-title">Solution</h3>
+
+            <p class="project-roles">
+              I implemented a centralized <b>Stat Manager</b> responsible for calculating and exposing all runtime stat
+              values.
+              Each stat is stored as a structured value containing a base value, accumulated flat modifiers, and
+              percentage
+              modifiers.
+              <br><br>
+              Final values are calculated using a consistent formula:
+              <b>final = (base + flat modifiers) * (1 + percentage modifiers)</b>.
+              <br><br>
+              Gameplay systems modify stats through the Stat Manager rather than directly editing gameplay variables.
+              This allowed systems such as items, aura rewards, leveling bonuses, and permanent upgrades to stack
+              cleanly
+              while remaining independent from one another.
+              <br><br>
+              Weapons maintain their own upgrade definitions but inherit relevant player stats through the same
+              pipeline.
+              For example, attack speed, damage multipliers, and duration are shared, while weapon-specific attributes
+              (such as projectile count or pierce) are only applied where relevant.
+              <br><br>
+              Systems query final stat values through a consistent API (e.g.
+              <b>StatManager.GetStat(StatTypes.Damage)</b>),
+              ensuring that gameplay behavior, UI feedback, and weapon calculations all reference the same computed
+              values.
+            </p>
+
+            <h3 class="project-title">Outcome</h3>
+
+            <p class="project-roles">
+              This architecture allowed multiple progression systems to interact simultaneously without creating
+              conflicting gameplay behavior. New items, weapons, and stat bonuses could be added quickly during
+              development
+              while maintaining predictable stacking rules.
+              <br><br>
+              The centralized stat pipeline also simplified integration between combat, inventory, leveling rewards,
+              and UI systems, enabling rapid iteration during the short 2.5 week development window.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+
+            <h3 class="project-title">Technical Challenge: Large-Scale Enemy Spawning</h3>
+
+            <p class="project-roles">
+              As a survivors-style game, 2DBonk required large numbers of enemies to appear simultaneously on screen.
+              During testing, the game frequently maintained hundreds of active enemies while continuing to spawn new
+              waves based on progression events such as bosses, swarms, and final survival phases.
+              <br><br>
+              Instantiating enemies dynamically during gameplay quickly became a performance bottleneck, especially
+              when enemy counts increased into the hundreds. A spawning system was required that could support large
+              entity counts while maintaining stable frame rates.
+            </p>
+
+            <h3 class="project-title">Solution</h3>
+
+            <p class="project-roles">
+              I implemented an enemy spawning architecture built around <b>ScriptableObject spawn tables</b> combined
+              with
+              an <b>object pooling system</b>.
+              <br><br>
+              Each level references a spawn table defining which enemy types can appear, their spawn weights, time
+              ranges,
+              and special conditions such as boss encounters or swarm phases.
+              <br><br>
+              At level initialization, enemies are pre-instantiated and stored in pools grouped by enemy type.
+              The spawn system retrieves enemies from these pools rather than creating new instances at runtime.
+              <br><br>
+              The spawn tables also support event-driven spawning behavior, including:
+              <br>
+              • Boss encounters that temporarily pause normal spawns <br>
+              • Swarm phases that increase spawn intensity for a limited duration <br>
+              • A final survival phase that triggers continuous enemy waves when the level timer expires
+            </p>
+
+            <h3 class="project-title">Outcome</h3>
+
+            <p class="project-roles">
+              This system allowed the game to support large numbers of enemies simultaneously while maintaining stable
+              performance. During testing, the prototype was able to sustain approximately <b>1000 concurrent enemies at
+                ~90 FPS</b>, with stress tests reaching roughly <b>1700 enemies at ~60 FPS in the editor</b>.
+              <br><br>
+              The spawn table architecture also allowed enemy encounters to be tuned through data rather than code,
+              enabling rapid iteration of pacing and difficulty during development.
+            </p>
+
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-video">
+            <h3 class="project-title">Full Gameplay</h3>
+            <iframe src="https://www.youtube.com/embed/" title="Trailer" frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+  <!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
