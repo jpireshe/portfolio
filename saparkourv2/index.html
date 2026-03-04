@@ -248,6 +248,46 @@
             </div>
           </div>
 
+          <div class="project-card">
+            <div class="project-content">
+
+              <h3 class="project-title">Technical Challenge: Rope Wrapping and Moving Grapple Anchors</h3>
+
+              <p class="project-roles">
+                Saparkour: Evolution rebuilt the grappling system from scratch using a fully custom Rigidbody-based character controller.
+                While this allowed much more control over the traversal mechanics, it introduced a new challenge: supporting rope behavior that could both wrap around geometry and remain attached to moving objects.
+                <br><br>
+                In the original Saparkour prototype, the grappling tongue could only connect directly to a target point. If geometry blocked the line between the player and the grapple anchor, the grapple would stop.
+                <br><br>
+                For the new version, I wanted the rope to behave more naturally by wrapping around obstacles and by remaining attached to moving platforms while the player was grappling. This required dynamically updating the rope path on update while keeping the physics interaction stable.
+              </p>
+
+              <h3 class="project-title">Solution</h3>
+
+              <p class="project-roles">
+                I implemented a rope system based on a dynamic list of rope points representing the corners of the rope path between the player and the grapple anchor.
+                <br><br>
+
+                Each frame, the system performs spherecasts along the rope path to detect geometry intersections. When the rope intersects a surface, a new corner point is inserted into the rope path, allowing the rope to wrap naturally around the obstacle.
+                <br><br>
+
+                If the player moves in a way that removes the obstruction, the system detects the clear path and removes the corresponding corner point, effectively "unwrapping" the rope.
+                <br><br>
+
+                To support grappling onto moving platforms, rope anchor points are stored in the local space of the object they are attached to. Their world position is recalculated on update, ensuring the rope remains attached correctly even when the platform moves.
+              </p>
+
+              <h3 class="project-title">Outcome</h3>
+
+              <p class="project-roles">
+                This system enabled the grappling mechanic to support more complex traversal scenarios, including swinging around corners and grappling onto moving platforms without breaking the rope simulation.
+                <br><br>
+
+                Beyond improving gameplay feel, the solution reinforced the importance of building traversal systems that can dynamically adapt to changing world geometry and physics interactions.
+              </p>
+
+            </div>
+          </div>
           
           <div class="project-card">
             <div class="project-video">
