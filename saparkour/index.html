@@ -232,7 +232,44 @@
               <br>
             </div>
           </div>
-          
+
+          <div class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">Technical Challenge: Hybrid Movement Controller</h3>
+              <p class="project-roles">
+                Saparkour was developed under a strict two-week production window. To accelerate early development, I initially implemented player movement using Unity's built-in CharacterController. This allowed me to quickly prototype the core jumping mechanics and begin level iteration. <br>
+                <br>
+                However, once I began implementing the grappling mechanic, I discovered a major limitation:
+                the CharacterController does not interact with physics forces in a way that allows for natural swinging or elastic movement. This made it unsuitable for the grappling system I had designed. <br>
+                <br>
+                Rather than rebuilding the entire movement system from scratch late in development, I designed a hybrid controller architecture that allowed the player to switch between two different movement implementations depending on gameplay context. <br>
+              </p>
+
+              <h3 class="project-title"> Solution </h3>
+              <p class="project-roles">
+                I implemented two separate movement controllers inside the player: <br>
+                <b>CharacterController-based movement</b> for standard ground movement and jumping <br>
+                <b>RigidBody-based movement</b> for grappling interactions and physics-driven traversal <br>
+                <br>
+                To manage these behaviors cleanly, I structured the movement system using a <b>State design pattern</b>. A manager class tracked the player's current movement context and activated the appropriate controller depending on the character's state. <br>
+                <br>
+                Example: <br>
+                Normal Movement → CharacterController active <br>
+                Grapple attached → Rigidbody controller activated <br>
+                Grapple released → return to CharacterController movement <br>
+                <br>
+                This state-driven architecture allowed the grappling system to use physics-based motion while preserving the responsiveness of the CharacterController for standard traversal. It also avoided a full rewrite of the movement system late in development while still enabling the grappling mechanic to behave as intended.
+              </p>
+              <h3 class="project-title"> Outcome </h3>
+              <p class="project-roles">
+                This hybrid system allowed the grappling mechanic to function as intended without requiring a full rewrite of the movement architecture.
+                <br>
+                <br>
+                More importantly, it reinforced the importance of designing gameplay systems that remain flexible when working under tight production constraints - which was possible mainly with the State design pattern.
+              </p>
+            </div>
+          </div>
+
           <div class="project-card">
             <div class="project-content">
               <h3 class="project-title">Evolution</h3>
