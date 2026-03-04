@@ -110,17 +110,10 @@
     <main id="main">
       <section id="projects" class="projects">
         <div class="container">
-          <div class="section-title">
-            <h2>Projects - Saparkour: Evolution (V2)</h2>
-          </div>
-
-          <!-- PROJECT CARD -->
-<!--
-
           <div class="project-card">
             <div class="project-video">
               <iframe 
-                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                src="https://www.youtube.com/embed/9K_sXMzIQOY"
                 title="Trailer"
                 frameborder="0"
                 allowfullscreen>
@@ -128,44 +121,52 @@
             </div>
 
             <div class="project-content">
-              <h3 class="project-title">Saparkour: Evolution</h3>
+              <h3 class="project-title">Saparkour: Evolution (V2)</h3>
               <p class="project-roles">
-                Movement Design | Player Controller | Level Prototyping | Systems Iteration
+                Traversal Systems | Custom Rigidbody Controller | Grapple Mechanics | Level Design
               </p>
-
-              <a href="https://pizzatunes.itch.io/saparkour" class="play-game">Play The Game →</a>
+              <a href="https://pizzatunes.itch.io/saparkour-evolution" class="play-game">Play The Game →</a>
             </div>
           </div>
-          <!-- END PROJECT CARD -->
-<!--
+
+          <div class="project-card">
+            <div class="project-content">
+              <h3 class="project-title">Original Version (V1)</h3>
+              <a href="../saparkour/" class="project-link">Click here to see the first version of the project</a>
+            </div>
+          </div>
+           
           <div class="project-card">
             <div class="project-content">
               <h3 class="project-title">Summary</h3>
               <br>
               <p class="project-roles">
-                 Saparkour is a 3D precision movement prototype built in Unity over two weeks.
-                 The game focuses on high-stakes jump commitment, physics-driven bounce interactions, and a 
-                 modular grappling system designed to enable controlled mid-air traversal.
+                  Saparkour: Evolution is a ground-up rebuild of the original Saparkour that explores a new movement model based on momentum-driven traversal.
+                  Instead of jump commitment, the player controls a spherical frog that accelerates through player input and maintains speed through careful steering and drifting.
+                  <br><br>
+                  The project focuses on physics-driven movement, expressive routing through bouncing and shortcuts, and a fully rebuilt grappling system capable of rope wrapping and interaction with moving platforms.
               </p>
               <br>
               <h3 class="project-title">Project Details</h3>
               <br>
               <p class="project-roles">
-                5 handcrafted levels <br>
-                14 interactive props <br>
-                Custom rigidbody-based character controller <br>
-                Power-bar jump charge system <br>
-                Physics bounce system (configurable bounciness > 1) <br>
-                Spring-damper grapple system <br>
-                Checkpoint + reset architecture <br>
-                Encrypted local leaderboard persistence <br>
+                1 large handcrafted level divided into 5 traversal sections <br>
+                Momentum-based custom Rigidbody character controller <br>
+                Drift system enabling sharp turns while preserving speed <br>
+                Expanded bounce system allowing rebounds on both walls and floor surfaces <br>
+                Fully rebuilt grappling system with rope wrapping mechanics <br>
+                Grappling compatible with moving platforms <br>
+                Rope system implemented using dynamic rope-point lists <br>
+                Custom rotation and rolling system driven by player velocity <br>
+                Multiple shortcuts and branching traversal paths enabling emergent routing <br>
               </p>
               <br>
               <h3 class="project-title">Team and Time</h3>
               <br>
               <p class="project-roles">
                 Team Size: 1 (Solo project) <br>
-                Time: 2 weeks
+                Time: 2 weeks <br>
+                Developed in parallel with FIEA capstone production.
               </p>
             </div>
           </div>
@@ -175,13 +176,12 @@
               <h3 class="project-title">Goals</h3>
               <br>
               <p class="project-roles">
-                 My goals for Saparkour were to make a 2-week game with as much detail and polishing as I could, while providing to the player the unique racing-rage-platforming feel. 
-                 <br>
-                 <br>
-                 My time over the 2 weeks was spent in 3 pillars: Design (over the first 2 days), Gameplay programming (over 9 days) and UI polishing (over the last 3 days).
-                 <br>
-                 <br>
-                 I took special time to develop and make tutorials of the game's main mechanics, jumping and grappling. I used the remaining gameplay programming time to make interactable props and combine action blocks into 3 well developed and more challenging levels.
+                 <p class="project-roles">
+                  The goal of Saparkour: Evolution was to revisit the original Saparkour concept after one semester at FIEA and explore how my technical design skills had evolved. Rather than iterating on the existing prototype, I rebuilt the project from scratch with a new movement model and a stronger focus on system architecture and code clarity.
+                  <br><br>
+                  The primary objective was to design a physics-driven traversal system based on momentum and drifting, supported by a fully custom Rigidbody controller and a redesigned grappling system. I also experimented with spline-based level construction to better support the new movement style and allow for smoother traversal routes and shortcuts.
+                  <br><br>
+                  Development took place over three weeks while working in parallel with capstone production. Most of the development time was dedicated to refining the character controller and traversal systems, while the final week focused on building a large demonstration level that showcases the mechanics and possible routes through the environment.
               </p>
             </div>
           </div>
@@ -190,50 +190,79 @@
             <div class="project-content">
               <h3 class="project-title">Systems</h3>
               <br>
-              <h4 style="color: white">Movement System</h4>
+
+              <h4 style="color: white">Momentum Movement System</h4>
               <p class="project-roles">
-                Custom rigidbody-based character controller <br>
-                Jump charge calculates impulse force based on input duration <br>
-                Air movement intentionally restricted to increase stakes <br>
-                Bounce system supports per-object configurable bounciness (including > 1 multipliers for momentum amplification) <br>
-                [WILL PUT A GIF HERE]
+                Custom Rigidbody-based character controller built around momentum traversal <br>
+                Player acceleration driven by directional input <br>
+                Velocity-preserving movement encouraging speed maintenance and routing decisions <br>
+                Expanded bounce system allowing rebounds on both walls and floor surfaces <br>
+                Physics interactions designed to support emergent movement strategies <br>
               </p>
+              <img style="width: 90%" src="../assets/img/saparkourv2/movementgif.gif">
+              <br><br>
+
+              <h4 style="color: white">Drift System</h4>
+              <p class="project-roles">
+                Custom drift manager manipulating Rigidbody velocity vectors <br>
+                Separates forward velocity from lateral velocity components <br>
+                Dampens forward speed while redirecting side velocity to enable sharp turns <br>
+                Visual drift feedback implemented through mesh tilt and yaw adjustments <br>
+                Designed to preserve player speed while enabling precision steering <br>\
+                Particle system and sound effects enhance feedback <br>
+              </p>
+              <img style="width: 90%" src="../assets/img/saparkourv2/driftgif.gif">
+              <br><br>
 
               <h4 style="color: white">Grapple System</h4>
               <p class="project-roles">
-                Spring-damper implementation for elastic tongue behavior <br>
-                Grapple state overrides air immobility constraint <br>
-                Modular attachment points defined via grappleable surface class <br>
-                Integrated into movement state transitions <br>
-              [WILL PUT A GIF HERE]
+                Spring-joint based grappling mechanic integrated with the physics controller <br>
+                Rope wrapping implemented through dynamic rope-point list <br>
+                Spherecasts detect geometry intersections and insert new rope corner points <br>
+                Grapple anchors stored in local space and updated to support moving platforms <br>
+                Rope path recalculated dynamically to maintain stable physics behavior <br>
               </p>
+              <img style="width: 90%" src="../assets/img/saparkourv2/grapplegif.gif">
+              <br><br>
 
-              <h4 style="color: white">Reset System</h4>
+              <h4 style="color: white">Rotation and Rolling System</h4>
               <p class="project-roles">
-                Objects reset to initial position for fast checkpoint iteration <br>
-                Movement state resets every reset event <br>
-                Different types of reset (soft vs. hard level reset) <br>
-              [WILL PUT A GIF HERE]
+                Mesh rotation decoupled from physics body to support ball-like traversal visuals <br>
+                Character roll calculated from forward velocity to simulate rolling motion <br>
+                Rotation manager aligns player facing direction with velocity or grapple target <br>
+                Drift visual feedback applied through controlled yaw offsets <br>
+                Can be seen in the movement and drift gifs above.
               </p>
+              <br><br>
 
-              <h4 style="color: white">Leaderboard System</h4>
+              <h4 style="color: white">Spline-Based Level Traversal</h4>
               <p class="project-roles">
-                Local leaderboard persistence <br>
-                Encrypted JSON storage <br>
-                Time-based ranking logic <br>
-                Designed for future online extensibility <br>
-              [WILL PUT A GIF HERE]
+                Level paths structured using spline-based traversal routes <br>
+                Designed to support momentum-based movement and drifting turns <br>
+                Allows flexible track shaping and shortcut opportunities <br>
+                Enables rapid iteration of traversal paths during level design <br>
               </p>
+              <img style="width: 90%" src="../assets/img/saparkourv2/splinegif.gif">
+              <br><br>
+
             </div>
           </div>
+
           
           <div class="project-card">
-            <div class="project-content">
-              <h3 class="project-title">Evolution</h3>
-              <a href="/saparkourV2" class="project-link">Click here to see the rebuilt and reimagined version of the project</a>
+            <div class="project-video">
+                <h3 class="project-title">Full Gameplay</h3>
+                <iframe 
+                  src="https://www.youtube.com/embed/o-uOHcSKF4Q"
+                  title="Trailer"
+                  frameborder="0"
+                  allowfullscreen>
+                </iframe>
             </div>
-          </div>  
-        </div>
+          </div>
+
+
+        </div>  
       </section>
     </main>
     <!-- End #main -->
