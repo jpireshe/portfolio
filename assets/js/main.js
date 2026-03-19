@@ -255,8 +255,57 @@
   });
 
   /**
-   * Initiate Pure Counter 
+   * Initiate Pure Counter
    */
   new PureCounter();
+
+  /**
+   * DVD-style bouncing background elements
+   */
+  (function() {
+    function bounceElement(el, speed) {
+      const sidebar = document.getElementById('header');
+      function getArea() {
+        const sw = (sidebar && window.innerWidth > 1199) ? sidebar.offsetWidth : 0;
+        return { xMin: sw, xMax: window.innerWidth, yMin: 0, yMax: window.innerHeight };
+      }
+
+      const a = getArea();
+      let x = a.xMin + Math.random() * (a.xMax - a.xMin);
+      let y = a.yMin + Math.random() * (a.yMax - a.yMin);
+      const angle = Math.random() * Math.PI * 2;
+      let vx = Math.cos(angle) * speed;
+      let vy = Math.sin(angle) * speed;
+
+      el.style.left = x + 'px';
+      el.style.top  = y + 'px';
+
+      function tick() {
+        x += vx;
+        y += vy;
+
+        const a = getArea();
+        const w = el.offsetWidth  / 2;
+        const h = el.offsetHeight / 2;
+
+        if (x - w < a.xMin) { x = a.xMin + w; vx = Math.abs(vx); }
+        if (x + w > a.xMax) { x = a.xMax - w; vx = -Math.abs(vx); }
+        if (y - h < a.yMin) { y = a.yMin + h; vy = Math.abs(vy); }
+        if (y + h > a.yMax) { y = a.yMax - h; vy = -Math.abs(vy); }
+
+        el.style.left = x + 'px';
+        el.style.top  = y + 'px';
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    window.addEventListener('load', function() {
+      const cube = document.querySelector('.bg-cube');
+      const name = document.querySelector('.bg-name');
+      if (cube) bounceElement(cube, 0.4);
+      if (name) bounceElement(name, 0.28);
+    });
+  })();
 
 })()
