@@ -264,6 +264,10 @@
    */
   (function() {
     window.addEventListener('load', function() {
+      requestAnimationFrame(function() { requestAnimationFrame(initBounce); });
+    });
+
+    function initBounce() {
       const sidebar = document.getElementById('header');
       const cube = document.querySelector('.bg-cube');
       const name = document.querySelector('.bg-name');
@@ -338,7 +342,7 @@
         requestAnimationFrame(tick);
       }
       requestAnimationFrame(tick);
-    });
+    }
   })();
 
 })()
