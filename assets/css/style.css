@@ -1373,7 +1373,7 @@ section {
 
 @keyframes roles-color-drift {
   0%, 100% { color: #cccccc; }
-  50%       { color: #c4b0f0; }
+  50%       { color: #d4cfe0; }
 }
 
 @keyframes h4-letter-spacing {
