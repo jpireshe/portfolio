@@ -1124,20 +1124,16 @@ section {
 }
 
 .contact .info {
-  padding: 30px;
-  background: #f0f0f0;
   width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-  border-radius: 25px;
 }
 
 .contact .info i {
   font-size: 20px;
-  color: #8b5cf6;
+  color: #a78bfa;
   float: left;
   width: 44px;
   height: 44px;
-  background: #ede9fe;
+  background: rgba(124, 58, 237, 0.15);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1150,14 +1146,21 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #0d0a1e;
+  color: #e2d9f3;
 }
 
 .contact .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #3d2a7e;
+  color: #a78bfa;
+}
+
+.contact .info .email p,
+.contact .info .linkedin p,
+.contact .info .linkedin p a {
+  color: #fbbf24;
+  font-weight: 700;
 }
 
 .contact .info .email p {
@@ -1354,7 +1357,20 @@ section {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
   text-align: left;
   position: relative;
+  overflow: hidden;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: 0.12;
+  pointer-events: none;
+  mix-blend-mode: screen;
 }
 
 .project-card:hover {
@@ -1610,6 +1626,7 @@ section {
 }
 
 /* Bold/strong highlight in project content and about section */
+#about .project-card p strong,
 #about .section-title p strong {
   font-weight: 700;
   color: transparent;
