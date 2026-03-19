@@ -260,51 +260,84 @@
   new PureCounter();
 
   /**
-   * DVD-style bouncing background elements
+   * DVD-style bouncing background elements with mutual collision
    */
   (function() {
-    function bounceElement(el, speed) {
+    window.addEventListener('load', function() {
       const sidebar = document.getElementById('header');
+      const cube = document.querySelector('.bg-cube');
+      const name = document.querySelector('.bg-name');
+      if (!cube || !name) return;
+
       function getArea() {
         const sw = (sidebar && window.innerWidth > 1199) ? sidebar.offsetWidth : 0;
         return { xMin: sw, xMax: window.innerWidth, yMin: 0, yMax: window.innerHeight };
       }
 
-      const a = getArea();
-      let x = a.xMin + Math.random() * (a.xMax - a.xMin);
-      let y = a.yMin + Math.random() * (a.yMax - a.yMin);
-      const angle = Math.random() * Math.PI * 2;
-      let vx = Math.cos(angle) * speed;
-      let vy = Math.sin(angle) * speed;
+      function makeBody(el, speed, startX, startY) {
+        const angle = Math.random() * Math.PI * 2;
+        return {
+          el,
+          x: startX,
+          y: startY,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+        };
+      }
 
-      el.style.left = x + 'px';
-      el.style.top  = y + 'px';
+      const a0 = getArea();
+      const cubeBody = makeBody(cube, 0.4, a0.xMin + (a0.xMax - a0.xMin) * 0.75, window.innerHeight * 0.28);
+      cubeBody.vx = 0.4 * Math.cos(25 * Math.PI / 180);
+      cubeBody.vy = 0.4 * Math.sin(25 * Math.PI / 180);
+      const bodies = [
+        cubeBody,
+        makeBody(name, 0.28, a0.xMin + name.offsetWidth / 2 + 40, window.innerHeight * 0.78),
+      ];
 
       function tick() {
-        x += vx;
-        y += vy;
-
         const a = getArea();
-        const w = el.offsetWidth  / 2;
-        const h = el.offsetHeight / 2;
 
-        if (x - w < a.xMin) { x = a.xMin + w; vx = Math.abs(vx); }
-        if (x + w > a.xMax) { x = a.xMax - w; vx = -Math.abs(vx); }
-        if (y - h < a.yMin) { y = a.yMin + h; vy = Math.abs(vy); }
-        if (y + h > a.yMax) { y = a.yMax - h; vy = -Math.abs(vy); }
+        // Move and wall-bounce each body
+        bodies.forEach(b => {
+          b.x += b.vx;
+          b.y += b.vy;
+          const hw = b.el.offsetWidth  / 2;
+          const hh = b.el.offsetHeight / 2;
+          if (b.x - hw < a.xMin) { b.x = a.xMin + hw; b.vx =  Math.abs(b.vx); }
+          if (b.x + hw > a.xMax) { b.x = a.xMax - hw; b.vx = -Math.abs(b.vx); }
+          if (b.y - hh < a.yMin) { b.y = a.yMin + hh; b.vy =  Math.abs(b.vy); }
+          if (b.y + hh > a.yMax) { b.y = a.yMax - hh; b.vy = -Math.abs(b.vy); }
+        });
 
-        el.style.left = x + 'px';
-        el.style.top  = y + 'px';
+        // AABB collision between the two bodies
+        const p = bodies[0], q = bodies[1];
+        const overlapX = (p.el.offsetWidth  + q.el.offsetWidth)  / 2 - Math.abs(p.x - q.x);
+        const overlapY = (p.el.offsetHeight + q.el.offsetHeight) / 2 - Math.abs(p.y - q.y);
+
+        if (overlapX > 0 && overlapY > 0) {
+          if (overlapX < overlapY) {
+            // Colliding on X axis — swap vx, push apart
+            [p.vx, q.vx] = [q.vx, p.vx];
+            const push = overlapX / 2 + 1;
+            if (p.x < q.x) { p.x -= push; q.x += push; }
+            else            { p.x += push; q.x -= push; }
+          } else {
+            // Colliding on Y axis — swap vy, push apart
+            [p.vy, q.vy] = [q.vy, p.vy];
+            const push = overlapY / 2 + 1;
+            if (p.y < q.y) { p.y -= push; q.y += push; }
+            else            { p.y += push; q.y -= push; }
+          }
+        }
+
+        bodies.forEach(b => {
+          b.el.style.left = b.x + 'px';
+          b.el.style.top  = b.y + 'px';
+        });
+
         requestAnimationFrame(tick);
       }
       requestAnimationFrame(tick);
-    }
-
-    window.addEventListener('load', function() {
-      const cube = document.querySelector('.bg-cube');
-      const name = document.querySelector('.bg-name');
-      if (cube) bounceElement(cube, 0.4);
-      if (name) bounceElement(name, 0.28);
     });
   })();
 
