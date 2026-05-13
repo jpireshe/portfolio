@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Joao Henares</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon" />
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="bg-mesh"><b></b><i></i></div>
+  <div class="bg-oct oct-a"><div class="oct-inner"><div class="of f1"></div><div class="of f2"></div><div class="of f3"></div><div class="of f4"></div><div class="of f5"></div><div class="of f6"></div><div class="of f7"></div><div class="of f8"></div></div></div>
+  <div class="bg-oct oct-b"><div class="oct-inner"><div class="of f1"></div><div class="of f2"></div><div class="of f3"></div><div class="of f4"></div><div class="of f5"></div><div class="of f6"></div><div class="of f7"></div><div class="of f8"></div></div></div>
+
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="../assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle" />
+        <h1 class="text-light"><a href="../index.html">Joao Henares</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://www.linkedin.com/in/joao-henares-61083a1b4/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/jpireshe" class="github"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li>
+            <a href="../index.html" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main id="main">
+    <section id="projects" class="projects">
+      <div class="container">
+
+        <!-- TRAILER CARD -->
+        <div class="project-card">
+          <div class="project-video">
+            <iframe src="https://www.youtube.com/embed/ubJs3mhLDxY?autoplay=1&mute=1&loop=1&playlist=ubJs3mhLDxY"
+              title="RACHA Trailer" frameborder="0" allow="autoplay" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">RACHA</h3>
+            <p class="project-roles">
+              Gameplay Systems | Roguelike Design | Architecture | Solo Development
+            </p>
+            <a href="https://pizzatunes.itch.io/racha" class="play-game">Play The Game →</a>
+          </div>
+        </div>
+
+        <!-- SUMMARY CARD -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Summary</h3>
+            <br>
+            <div class="system-block">
+              <div class="system-text">
+                <p class="project-roles">
+                  RACHA is a Balatro-inspired roguelike deckbuilder built in Unity over 6 weeks, set in the
+                  Brazilian criminal underworld. You manage a crew of agents to generate cash and pay off
+                  escalating agiota (loan shark) debts — miss a payment and the run is over.
+                  <br><br>
+                  Each agent has a unique ability profile built from composable behavior slots. Each payday,
+                  the player selects a sequence card to determine activation order and reaction cards to bend
+                  the rules. Between paydays, the shop offers new agents and cards to expand the operation.
+                  <br><br>
+                  The project was designed as a systems architecture showcase: a fully data-driven agent behavior
+                  framework, a typed scoped blackboard system, and a visual event queue decoupling game logic
+                  from presentation — all built from scratch with extensibility as the core design constraint.
+                </p>
+              </div>
+              <img src="../assets/img/racha/RachaLogoFinal.png" class="project-logo">
+            </div>
+            <br>
+            <h3 class="project-title">Project Details</h3>
+            <br>
+            <p class="project-roles">
+              <b>Content</b><br>
+              25+ unique agents across three risk tiers (Dirty, Grey, Clean) <br>
+              10 sequence cards determining activation order and round modifiers <br>
+              9 reaction cards modifying mechanics before each round <br>
+              5 boss modifiers applying level-scoped rule changes <br>
+              Full shop economy with agent and card packs <br>
+              Multi-set run progression with escalating debt targets <br>
+              <br>
+              <b>Systems</b><br>
+              Composable agent behavior system with 11 independent strategy slots <br>
+              Typed blackboard context system scoped to run, level, and round <br>
+              Sequential visual event queue decoupling logic from animations <br>
+              Per-system event buses with no cross-system direct dependencies <br>
+              ScriptableObject-driven data pipeline for all agents, cards, and bosses <br>
+            </p>
+            <br>
+            <h3 class="project-title">Team and Time</h3>
+            <br>
+            <p class="project-roles">
+              Team Size: 1 (Solo project) <br>
+              Time: 6 weeks (Gauntlet-Style Production) <br>
+              Engine: Unity (C#) <br>
+            </p>
+          </div>
+        </div>
+
+        <!-- GOALS CARD -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Goals</h3>
+            <br>
+            <p class="project-roles">
+              The goal of RACHA was to design and ship a complete roguelike loop within a 6-week production
+              window while building a system architecture capable of supporting a large, growing content library
+              without regression.
+              <br><br>
+              Inspired by <b>Balatro</b>, the project focuses on synergy-driven decision making, escalating risk,
+              and emergent combinations between agents, cards, and boss modifiers. The design prioritizes player
+              expression: every run plays differently depending on which agents survive, which cards are acquired,
+              and how the player chooses to manage heat versus cash output.
+              <br><br>
+              From a technical perspective, the core constraint was: <b>adding new content should never require
+              touching existing systems.</b> Every agent, card, and boss modifier is implemented as a new file
+              only — no changes to core logic. This constraint drove the entire architecture and was maintained
+              throughout the full 6-week production.
+              <br><br>
+              The project also served as a personal exploration of software design patterns applied to game
+              development — the strategy pattern, the blackboard pattern, event-driven architecture, and
+              the command/queue pattern all appear as first-class solutions to real design problems encountered
+              during production.
+            </p>
+          </div>
+        </div>
+
+        <!-- SYSTEMS CARD -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Systems</h3>
+            <br>
+
+            <h4>Agent Behavior System</h4>
+            <div class="system-block">
+              <div class="system-text">
+                <p class="project-roles">
+                  Each agent is defined by an <b>AgentActivationStrategy ScriptableObject</b> composed of up to 11 independent behavior slots <br>
+                  Behavior slots include: Cash, Heat, CatchChance, ColdDuration, DisableDuration, OnCaught, OnBeingCaught, OnLevelStart, OnOtherAgentBeingCaught, OnOtherAgentCaught, OnTurnFinish <br>
+                  Each slot is an abstract ScriptableObject — new behaviors are new files with no changes to existing code <br>
+                  Agents delegate all output calculations and lifecycle hooks to their strategy, keeping AgentInstance as pure runtime state <br>
+                  25+ agents implemented across three archetypes, each with unique ability combinations <br>
+                </p>
+              </div>
+              <img src="../assets/img/racha/RachaAgents.png">
+            </div>
+
+            <h4>Card System</h4>
+            <div class="system-block">
+              <div class="system-text">
+                <p class="project-roles">
+                  <b>Sequence cards</b> define activation order and apply round-scoped multipliers before any agent acts <br>
+                  <b>Reaction cards</b> apply context modifiers (saves, heat reductions, sacrifices, catch chance changes) at round start <br>
+                  Cards are instances wrapping definitions, persisting across levels via a DeckManager that survives scene transitions <br>
+                  New cards are new ScriptableObject definitions and a single strategy class — no core changes required <br>
+                  10 sequence cards and 9 reaction cards implemented with distinct mechanics <br>
+                </p>
+              </div>
+              <img src="../assets/img/racha/RachaCards.png">
+            </div>
+
+            <h4>Round Execution Pipeline</h4>
+            <div class="system-block">
+              <div class="system-text">
+                <p class="project-roles">
+                  Each round runs a full pipeline: reaction cards apply → activation list built → agents activate in order → raid checks → consequences resolved <br>
+                  <b>RaidResolver</b> handles probabilistic catch rolls, reading catch chance from multiple stacked context layers <br>
+                  Consequence resolution supports saves, redirects (X9), forced kills, and chain reactions (Hacker) without recursion issues <br>
+                  All-or-Nothing, Chain Gang, and other complex round modifiers resolved as post-loop context passes <br>
+                  Fully separated from visual output — the round runs to completion before any animation plays <br>
+                </p>
+              </div>
+              <img src="../assets/img/racha/VisualQueue.gif">
+            </div>
+
+            <h4>Shop and Progression</h4>
+            <div class="system-block">
+              <div class="system-text">
+                <p class="project-roles">
+                  Between paydays, the shop offers individual agents, agent packs, sequence card packs, and reaction card packs <br>
+                  Purchases funded by pinos (a secondary currency generated by specific agents) <br>
+                  Agents can be sold from the roster via drag-and-drop <br>
+                  Run progression structured across multiple sets, each with escalating debt targets and a unique boss modifier per level <br>
+                  Boss modifiers applied at level start and persist for the full payday (e.g. all catches kill, random agent disabled each round) <br>
+                </p>
+              </div>
+              <img src="../assets/img/racha/Shop.png">
+            </div>
+
+          </div>
+        </div>
+
+        <!-- TECHNICAL CHALLENGE 1 -->
+        <div class="project-card">
+          <div class="project-content">
+
+            <h3 class="project-title">Technical Challenge: Composable Agent Behavior System</h3>
+
+            <p class="project-roles">
+              RACHA required a large and growing library of unique agents — each with distinct cash output logic,
+              heat behavior, catch chance modifiers, and reactions to game events like being caught, other agents
+              being caught, level starts, and turn endings.
+              <br><br>
+              A naive implementation would embed all agent logic into a single class or use large switch statements
+              keyed on agent type. This approach would require <b>modifying core systems every time new content was
+              added</b>, creating regression risk and slowing iteration — a major problem in a 6-week production window
+              with content being added daily.
+              <br><br>
+              The challenge was to design a system where adding a new agent with entirely new behavior required
+              <b>zero changes to any existing file.</b>
+            </p>
+
+            <h3 class="project-title">Solution</h3>
+
+            <p class="project-roles">
+              I implemented a <b>strategy pattern</b> using Unity ScriptableObjects as composable behavior slots.
+              <br><br>
+              Each agent's definition references an <b>AgentActivationStrategy ScriptableObject</b> that aggregates
+              up to 11 independent behavior slots — one per lifecycle event. Each slot is an abstract
+              ScriptableObject base class with concrete implementations as separate files.
+              <br><br>
+              For example, the <b>OnTurnFinish</b> slot has implementations for Olho Vivo (reduces next agent's
+              catch chance), Dupligata (replays a previous agent), Psicopata (random chance to kill a roster member),
+              Funkeiro (stacks a round cash multiplier), and Bebezão (chance to get himself caught for a 2x bonus) —
+              all as independent files, none touching each other.
+              <br><br>
+              <b>AgentInstance</b> holds only runtime state (level, status, XP) and delegates all behavior to its
+              strategy. Adding a new agent means creating a new AgentDefinition SO, a new AgentActivationStrategy SO,
+              and whichever new behavior SOs are needed — nothing else changes.
+            </p>
+
+            <h3 class="project-title">Outcome</h3>
+
+            <p class="project-roles">
+              Over 25 agents were implemented across the 6-week production window, many added in the final days,
+              with zero regression to existing agents or core systems.
+              <br><br>
+              The architecture also enabled rapid design iteration — rebalancing an agent meant changing a serialized
+              field in the Inspector, and creating a variant of an existing behavior (e.g. Miliciano reusing
+              Laranja's cash behavior with a custom heat behavior) required no new code at all.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- TECHNICAL CHALLENGE 2 -->
+        <div class="project-card">
+          <div class="project-content">
+
+            <h3 class="project-title">Technical Challenge: Typed Scoped Blackboard Context System</h3>
+
+            <p class="project-roles">
+              RACHA's game logic involves many systems that need to share state across different lifetimes —
+              some data is relevant only for a single round (a cash multiplier from a sequence card), some
+              persists for a full level (a boss modifier doubling catch chances), and some spans the entire run
+              (the player's roster, current heat).
+              <br><br>
+              Without a principled approach, systems would need direct references to each other or would read
+              from a global state object — creating tight coupling, making systems hard to test, and producing
+              subtle bugs when data from one scope leaked into another.
+              <br><br>
+              The challenge was to let any system read and write shared state <b>without knowing about any other
+              system</b>, while keeping data correctly scoped so it resets at the right time.
+            </p>
+
+            <h3 class="project-title">Solution</h3>
+
+            <p class="project-roles">
+              I implemented a <b>typed blackboard pattern</b> organized into three scopes: RunContext,
+              LevelContext, and RoundContext — each a dictionary keyed by type, reset independently when
+              its scope ends.
+              <br><br>
+              Any system can write a typed record into the appropriate context:
+              <b>RoundCashMultiplierContext.Stack(ctx, 2f)</b> from a sequence card, or
+              <b>LevelCatchChanceMultiplierContext.Stack(ctx, 1.5f)</b> from a boss modifier.
+              Any system can read it: <b>ctx.RoundContext.Get&lt;RoundCashMultiplierContext&gt;()</b>.
+              No system holds a reference to any other system — they communicate only through the blackboard.
+              <br><br>
+              Context records are plain C# classes with static factory methods enforcing correct initialization
+              and update patterns. Many use private constructors and static Stack() methods to enforce
+              multiplicative or additive accumulation rules.
+            </p>
+
+            <h3 class="project-title">Outcome</h3>
+
+            <p class="project-roles">
+              Every game system — agents, cards, bosses, the heat system, the raid resolver — reads and writes
+              shared state through the blackboard with no direct inter-system dependencies.
+              <br><br>
+              Adding new modifiers (new boss effects, new card mechanics, new agent abilities) required only
+              creating a new context record class and reading it in the appropriate system — no existing code changed.
+              The scoping system also eliminated an entire class of bugs where round-scoped data would
+              incorrectly persist into the next round.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- TECHNICAL CHALLENGE 3 -->
+        <div class="project-card">
+          <div class="project-content">
+
+            <h3 class="project-title">Technical Challenge: Visual Event Queue</h3>
+
+            <p class="project-roles">
+              RACHA's round execution involves many simultaneous events — agents activating, generating cash and
+              heat, getting raided, being caught, triggering chain reactions, leveling up, and being removed from
+              the roster — all happening in a single synchronous loop that completes in milliseconds.
+              <br><br>
+              Presenting all of this visually required playing animations sequentially so the player could follow
+              what happened: Hacker gets caught, then all other agents get raided one by one, then the roster
+              reconciles. If game logic and animations ran in the same frame, <b>visual events would overlap,
+              fire out of order, or reference agents that had already been destroyed.</b>
+              <br><br>
+              The challenge was to let game logic run at full speed while ensuring visual feedback always plays
+              back in the correct sequence, even for deeply nested chain reactions.
+            </p>
+
+            <h3 class="project-title">Solution</h3>
+
+            <p class="project-roles">
+              I implemented a <b>RoundVisualQueue</b> — a singleton MonoBehaviour that acts as a sequential
+              playback system for visual events. Game logic fires events that enqueue IVisualEvent objects
+              rather than directly triggering animations. The queue plays each event to completion before
+              starting the next.
+              <br><br>
+              Visual events are self-contained objects that know how to play themselves (a DOTween sequence,
+              a UI update, a roster reconcile) and signal completion when done. They capture all necessary
+              state at enqueue time via snapshots, so they remain valid even if the underlying agent state
+              changes before playback.
+              <br><br>
+              The queue also supports a <b>speed multiplier</b> — a player-facing toggle that scales all
+              animation durations, allowing fast-forward without any changes to game logic.
+            </p>
+
+            <h3 class="project-title">Outcome</h3>
+
+            <p class="project-roles">
+              Complex multi-agent sequences — Hacker chain raids, Psicopata kills mid-round, Dupligata replays,
+              Bebezão self-catches — all play back correctly and readably regardless of how deep the chain goes.
+              <br><br>
+              The full decoupling also meant game logic could be iterated on without any concern for visual
+              timing, and new visual events could be added for new agents and cards without touching the
+              round execution pipeline.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- FULL GAMEPLAY CARD -->
+        <div class="project-card">
+          <div class="project-video">
+            <h3 class="project-title">Full Gameplay</h3>
+            <iframe src="https://www.youtube.com/embed/TsWXkdpDvyk?autoplay=1&mute=1&loop=1"
+              title="RACHA Full Gameplay" frameborder="0" allow="autoplay" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
