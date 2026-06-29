@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>Joao Henares</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon" />
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="bg-mesh"><b></b><i></i></div>
+  <div class="bg-oct oct-a"><div class="oct-inner"><div class="of f1"></div><div class="of f2"></div><div class="of f3"></div><div class="of f4"></div><div class="of f5"></div><div class="of f6"></div><div class="of f7"></div><div class="of f8"></div></div></div>
+  <div class="bg-oct oct-b"><div class="oct-inner"><div class="of f1"></div><div class="of f2"></div><div class="of f3"></div><div class="of f4"></div><div class="of f5"></div><div class="of f6"></div><div class="of f7"></div><div class="of f8"></div></div></div>
+
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <img src="../assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle" />
+        <h1 class="text-light"><a href="../index.html">Joao Henares</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://www.linkedin.com/in/joaohenares/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/jpireshe" class="github"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li>
+            <a href="../index.html" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main id="main">
+    <section id="projects" class="projects">
+      <div class="container">
+
+        <!-- TRAILER CARD -->
+        <div class="project-card">
+          <div class="project-video">
+            <iframe src="https://www.youtube.com/embed/M5D11oSF_oA?autoplay=1&mute=1&loop=1&playlist=M5D11oSF_oA"
+              title="Pogo Carrot Trailer" frameborder="0" allow="autoplay" allowfullscreen>
+            </iframe>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Pogo Carrot</h3>
+            <p class="project-roles">
+              Physics Traversal | Pogo Controller | UE5 C++ | Solo Design + Programming
+            </p>
+            <a href="https://pizzatunes.itch.io/pogo-carrot" class="play-game">Play The Game →</a>
+          </div>
+        </div>
+
+        <!-- SUMMARY CARD -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Summary</h3>
+            <br>
+            <p class="project-roles">
+              Pogo Carrot is a physics traversal prototype built solo in Unreal Engine 5 over two weeks.
+              The core mechanic is a pogo stick controller where bounce and movement are physically coupled —
+              charge intensity directly determines launch trajectory and speed, making every hop a deliberate
+              movement decision rather than a fixed-height jump.
+              <br><br>
+              The project served as a focused engine migration challenge: porting a Unity-style event bus framework
+              and a physics-based character controller architecture into Unreal C++ from scratch, adapting familiar
+              patterns to a new engine's physics model and API.
+            </p>
+            <br>
+            <h3 class="project-title">Project Details</h3>
+            <br>
+            <p class="project-roles">
+              <b>Mechanics</b><br>
+              Charge-driven pogo controller — hold to charge, release to launch; charge level scales both height and horizontal velocity <br>
+              Automated camera system decoupled from movement input, solving the two-input constraint without sacrificing feel <br>
+              Pre- and post-bounce coyote time for both standard and charged bounces, preserving player intent at the edge of a jump <br>
+              <br>
+              <b>Technical</b><br>
+              Fully C++-based — no Blueprint logic in the movement system <br>
+              Event bus architecture ported from Unity C# to Unreal C++, organized into domain sub-buses (Race, Character) on the Game Instance <br>
+              Custom movement mode (MOVE_Custom) extending UCharacterMovementComponent — manual velocity, gravity, and collision resolution via CMC's own sweep API <br>
+            </p>
+            <br>
+            <h3 class="project-title">Team and Time</h3>
+            <br>
+            <p class="project-roles">
+              Team Size: 1 (Solo project) <br>
+              Time: 2 weeks (Prototype Production) <br>
+              Engine: Unreal Engine 5 (C++) <br>
+            </p>
+          </div>
+        </div>
+
+        <!-- GOALS CARD -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Goals</h3>
+            <br>
+            <p class="project-roles">
+              The goal of Pogo Carrot was to prototype a physics-driven traversal mechanic that felt
+              expressive and skill-rewarding within a tight two-week window — while simultaneously treating
+              the project as an engine migration exercise.
+              <br><br>
+              The core design question was: <b>what does it feel like to move when every variable of your
+              jump is under your control?</b> By coupling charge intensity directly to both height and
+              horizontal velocity, the pogo controller turns traversal into a continuous input problem —
+              not a binary "press jump" decision.
+              <br><br>
+              On the technical side, the constraint was to bring proven Unity patterns — specifically an event
+              bus architecture and a custom character controller approach — into Unreal Engine 5 without falling
+              back on Blueprint. The goal was to understand how UE5's delegate system and movement pipeline differ
+              and adapt the architecture accordingly, not just replicate surface-level behavior.
+            </p>
+          </div>
+        </div>
+
+        <!-- SYSTEMS CARD -->
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title">Systems</h3>
+            <br>
+
+            <h4>Charge-Coupled Pogo Controller</h4>
+            <div class="system-block">
+              <div class="system-text">
+                <p class="project-roles">
+                  Movement runs as a custom mode (<b>MOVE_Custom</b>) inside <b>UCharacterMovementComponent</b>,
+                  managing its own velocity variable each tick. Gravity is applied manually when airborne;
+                  collision is resolved via CMC's <b>SafeMoveUpdatedComponent</b> and <b>SlideAlongSurface</b>,
+                  stripping velocity into a surface on contact. Ground detection is a short line trace from
+                  the capsule bottom.
+                  <br><br>
+                  Horizontal movement applies force in camera-relative directions each tick, with a braking
+                  multiplier when input opposes the current velocity and an air control multiplier when airborne.
+                  Drag decelerates and snaps to zero when no input is held.
+                  <br><br>
+                  On bounce, <b>ApplyBounce</b> decomposes the launch vector into two components relative to
+                  the impact surface: along-normal (carrying the vertical force) and along-surface (carrying
+                  the horizontal force). This means slopes naturally redirect the player — an angled wall
+                  bounces you diagonally without any special-case logic.
+                  <br><br>
+                  Charge produces three distinct outcomes based on timing: <b>Power</b> (released in a coyote
+                  window while charged → scales toward MaxBounceForce), <b>Penalty</b> (charging but missed
+                  the window → scales toward PenaltyForce), or <b>Default</b> (no charge attempt).
+                </p>
+              </div>
+            </div>
+
+            <h4>Automated Camera System</h4>
+            <div class="system-block">
+              <div class="system-text">
+                <p class="project-roles">
+                  A pogo controller creates a two-input problem: charging consumes the same input axis that
+                  would normally handle camera rotation, leaving the player unable to aim and charge simultaneously.
+                  The camera system resolves this by automating rotation during the charge phase — tracking
+                  movement direction and blending smoothly back to player control on release, so feel is preserved
+                  without requiring a second analog input.
+                </p>
+              </div>
+            </div>
+
+            <h4>Coyote Time (Pre- and Post-Bounce)</h4>
+            <div class="system-block">
+              <div class="system-text">
+                <p class="project-roles">
+                  The coyote system has two distinct windows managed by <b>BounceForceManager</b>, each
+                  covering a different player intention:
+                  <br><br>
+                  <b>Pre-coyote (charge then land)</b>: the player charges and releases before the pogo
+                  tip contacts the ground. On release, a coyote timer starts and the charged state is saved.
+                  If the bounce detector fires before the timer expires, the landing is treated as a
+                  Power bounce — the player's early commitment is honored.
+                  <br><br>
+                  <b>Post-coyote (land then charge)</b>: the player lands on a natural (uncharged) bounce
+                  first. On contact, a coyote timer starts and the impact normal is saved in the bounce
+                  detector. If the player releases a charge before the timer expires, an
+                  <b>OnPostCoyoteRelease</b> event fires and the bounce detector replays the bounce using
+                  the saved normal — the player can react to the landing and still get a Power bounce.
+                  <br><br>
+                  The two windows are mutually exclusive: bouncing while in pre-coyote consumes it and
+                  blocks post-coyote for that contact, preventing double-rewarding.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- TECHNICAL CHALLENGE 1 -->
+        <div class="project-card">
+          <div class="project-content">
+
+            <h3 class="project-title">Technical Challenge: Porting an Event Bus from Unity to Unreal C++</h3>
+
+            <p class="project-roles">
+              The pogo controller relies on decoupled communication between systems — the controller, camera,
+              animation layer, and coyote time logic all need to react to bounce events without holding direct
+              references to each other. In Unity (C#), this was handled by a typed event bus built with
+              generics and delegates: systems subscribe to strongly-typed event channels and fire them
+              without knowing who is listening.
+              <br><br>
+              Unreal Engine 5 provides its own event and delegate infrastructure, but it is macro-heavy,
+              Blueprint-oriented by default, and does not map cleanly to a generic typed channel pattern.
+              Adapting the Unity framework meant working within UE5's macro system, Unreal's object model
+              (UObject lifecycle, garbage collection), and a templated C++ environment with stricter
+              constraints than C# generics.
+              <br><br>
+              The challenge was to reproduce the same decoupled pub-sub pattern in Unreal C++ without
+              losing type safety or requiring Blueprint glue code.
+            </p>
+
+            <h3 class="project-title">Solution</h3>
+
+            <p class="project-roles">
+              I implemented the bus as a <b>UObject held directly on UPogoGameInstance</b> and accessed
+              via <b>Cast&lt;UPogoGameInstance&gt;(GetWorld()->GetGameInstance())->EventBus</b> from any
+              component that needs it. This keeps the bus at game-instance scope without a subsystem
+              registration step and gives every UObject a single, consistent access path.
+              <br><br>
+              Rather than a flat channel registry, the bus is organized into <b>domain sub-buses</b> —
+              <b>EventBus->Race</b> (OnFinishReached, OnKillboxEntered, OnRespawn) and
+              <b>EventBus->Character</b> (OnBounce, OnBounceSound, OnChargeChanged,
+              OnPostCoyoteRelease, OnPostCoyoteBounce). Each event is declared with
+              <b>DECLARE_DYNAMIC_MULTICAST_DELEGATE</b>, so subscriptions use <b>AddDynamic</b> and
+              <b>RemoveAll</b> — compatible with UE5's garbage collector and Blueprint-bindable if needed.
+              <br><br>
+              The result is the same decoupled pattern from Unity: <b>BounceDetector</b> fires
+              <b>OnBounce</b>; <b>BounceForceManager</b>, the camera, and the movement component each
+              subscribe independently and react without any direct cross-references.
+            </p>
+
+            <h3 class="project-title">Outcome</h3>
+
+            <p class="project-roles">
+              All major systems — bounce detection, coyote time, charge state, camera, sound — communicate
+              exclusively through the event bus with no direct inter-system references.
+              <br><br>
+              The domain sub-bus structure also kept subscriptions readable: each component subscribes
+              only to the sub-bus relevant to it (Race events for respawn/finish handling, Character events
+              for gameplay feedback), matching how the Unity version organized channels by context.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- TECHNICAL CHALLENGE 2 -->
+        <div class="project-card">
+          <div class="project-content">
+
+            <h3 class="project-title">Technical Challenge: Custom Character Controller in UE5</h3>
+
+            <p class="project-roles">
+              UE5's <b>Character Movement Component</b> provides robust swept-capsule collision and
+              built-in movement modes (Walking, Falling, Flying), but those modes run their own velocity
+              integration and gravity — you cannot cleanly inject custom force logic without fighting the
+              component's internal state. CMC's jump implementation is an impulse applied to a managed
+              velocity with built-in apex detection, which produces consistent hops but not a pogo
+              mechanic where bounce height and angle depend on how hard you charged and what surface you hit.
+              <br><br>
+              The challenge was to implement movement that felt physically grounded — with manual gravity,
+              drag, air control, and surface-normal-aware bounce impulses — while still using CMC's
+              swept collision infrastructure rather than reimplementing capsule sweeps from scratch.
+            </p>
+
+            <h3 class="project-title">Solution</h3>
+
+            <p class="project-roles">
+              I extended CMC using <b>MOVE_Custom</b> mode, which hands full tick control to the subclass
+              while keeping CMC's collision primitives available. The component manages its own
+              <b>Velocity</b> vector: gravity accumulates when airborne, drag decelerates when no input
+              is held, and input force is applied in camera-relative directions each tick.
+              <br><br>
+              Collision is resolved using CMC's own <b>SafeMoveUpdatedComponent</b> and
+              <b>SlideAlongSurface</b> — so swept capsule accuracy is preserved — with a manual step
+              to strip velocity going into a blocking surface via dot product against the hit normal.
+              Ground detection is a short downward line trace from the capsule bottom, giving direct
+              access to the surface normal without CMC's floor data.
+              <br><br>
+              Bounce impulses are decomposed into two components relative to the impact normal:
+              <b>along-normal</b> (scaled by VerticalBounceForce) and <b>along-surface</b>
+              (scaled by HorizontalBounceForce). The bounce direction blends the impact normal with
+              the actor's up vector via tunable multipliers, so angled surfaces redirect the player
+              naturally without any special-case geometry handling.
+            </p>
+
+            <h3 class="project-title">Outcome</h3>
+
+            <p class="project-roles">
+              The controller responds to charge input with physically accurate launch arcs —
+              a partial charge produces a low flat trajectory, a full charge produces a steep high arc —
+              and slopes redirect the bounce direction naturally.
+              <br><br>
+              Using MOVE_Custom instead of bypassing CMC entirely meant collision resolution stayed
+              robust on complex geometry, and the coyote and charge systems integrated cleanly
+              against the same manual velocity state rather than fighting CMC's internal floor logic.
+            </p>
+
+          </div>
+        </div>
+
+        <!-- FULL GAMEPLAY CARD -->
+        <div class="project-card">
+          <div class="project-video">
+            <h3 class="project-title">Full Gameplay</h3>
+            <iframe src="https://www.youtube.com/embed/M5D11oSF_oA?autoplay=1&mute=1&loop=1"
+              title="Pogo Carrot Full Gameplay" frameborder="0" allow="autoplay" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
